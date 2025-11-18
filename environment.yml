@@ -7,12 +7,12 @@ channels:
 dependencies:
   - python=3.11
   # Core scientific stack
-  - numpy>=1.23
+  - numpy>=1.23,<=1.26.4
   - pillow>=9
   - pip
   # PyTorch + CUDA 12.4
-  - pytorch>=2.0
-  - torchvision>=0.15
+  - pytorch>=2.0,<2.5  # Compatible with transformers 4.42+
+  - torchvision>=0.15,<0.19  # pytorchvideo 0.1.5 requires <0.19
   - torchaudio
   - pytorch-cuda=12.4
   # Dev
@@ -30,7 +30,7 @@ dependencies:
       - clip @ git+https://github.com/openai/CLIP.git
       - opencv-python>=4.8
       # VisionReward optional dependencies
-      - transformers>=4.42.0
+      - transformers>=4.42.0,<=4.42.4
       - accelerate>=0.20.0
       - pytorchvideo==0.1.5
       - decord>=0.6.0

@@ -24,8 +24,7 @@ RUN wget -O /tmp/ffmpeg.tar.xz https://johnvansickle.com/ffmpeg/releases/ffmpeg-
 
 COPY . .
 
-RUN pip install torch torchvision --index-url https://download.pytorch.org/whl/cu124
-RUN pip install -e .[all]
+RUN pip install surveyor2
 RUN pip install vbench --no-deps
 
 WORKDIR /workspace

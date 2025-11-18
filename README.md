@@ -6,9 +6,7 @@ Surveyor2 is a comprehensive video quality assessment tool that evaluates your g
 
 ## Demo
 
-<video src="res/SurveyorDemo.mp4" controls width="100%">
-  Your browser does not support the video tag.
-</video>
+https://github.com/user-attachments/assets/8289a7ef-ef78-4a38-ac09-b968fdefbdf3
 
 ---
 

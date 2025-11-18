@@ -15,7 +15,7 @@ Creates Python 3.11, CUDA 12.4 PyTorch stack, ffmpeg+libvmaf, and extras.
 ```bash
 conda env create -f environment.yml
 conda activate surveyor2
-pip install -e .[all]
+pip install surveyor2
 
 # Install vbench separately with --no-deps to avoid transformers version conflicts:
 pip install vbench --no-deps

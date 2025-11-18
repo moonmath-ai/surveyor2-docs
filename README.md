@@ -4,6 +4,10 @@ Video quality evaluation toolkit.
 
 Surveyor2 is a comprehensive video quality assessment tool that evaluates your generated videos using metrics including LPIPS, CLIPScore, VBench, VisionReward and more. Simply point it at your videos and get detailed quality scores, baseline comparisons, and actionable insights. This tool can be used for benchmarking video generation models, tracking quality improvements, and integrating into your CI/CD pipeline with structured JSON reports.
 
+## Demo
+
+https://github.com/user-attachments/assets/8289a7ef-ef78-4a38-ac09-b968fdefbdf3
+
 ---
 
 ## Install

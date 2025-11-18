@@ -1,0 +1,493 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Surveyor2 Report</title>
+  
+    <style>
+      :root { --bg: #0f172a; --fg: #e2e8f0; --muted:#94a3b8; --accent:#22d3ee; --ok:#22c55e; --err:#ef4444; }
+      html, body { margin:0; padding:0; background:var(--bg); color:var(--fg); font: 14px/1.5 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif; }
+      header { padding: 16px 24px; border-bottom: 1px solid #1f2937; }
+      header h1 { margin: 0 0 6px 0; font-size: 18px; }
+      header .meta { color: var(--muted); }
+      main { padding: 20px 24px 40px; max-width: 1100px; margin: 0 auto; }
+      .summary, .composite-summary { margin: 16px 0; }
+      table { width: 100%; border-collapse: collapse; background: #0b1220; border: 1px solid #1f2937; border-radius: 8px; overflow: hidden; }
+      thead { background: #111827; color: var(--muted); }
+      th, td { padding: 8px 10px; border-bottom: 1px solid #1f2937; text-align: left; }
+      .report { margin: 28px 0; padding: 16px; border: 1px solid #1f2937; border-radius: 10px; background: #0b1220; }
+      .report h2 { margin: 0 0 8px 0; font-size: 16px; }
+      .report .inputs { color: var(--muted); margin-bottom: 8px; }
+      .metric.ok .status { color: var(--ok); }
+      .metric.error .status { color: var(--err); font-weight: 600; }
+      .metric .error { color: var(--err); }
+      .composite { color: var(--accent); margin-left: 8px; font-weight: 600; }
+      .empty { color: var(--muted); font-style: italic; }
+      footer { color: var(--muted); padding: 18px 24px; border-top: 1px solid #1f2937; }
+      a { color: var(--accent); text-decoration: none; }
+    </style>
+    
+</head>
+<body>
+  <header>
+    <h1>Surveyor2 Report</h1>
+    <div class="meta">started_at: 2025-09-28T10:14:28Z · items: 20 · config: a8bc912f</div>
+  </header>
+  <main>
+    <section class="summary"><table class="summary">
+  <thead><tr><th>metric</th><th>min</th><th>max</th><th>avg</th></tr></thead>
+  <tbody><tr><td class="name">clipscore</td><td class="min">0.2745</td><td class="max">0.4135</td><td class="avg">0.3383</td></tr>
+<tr><td class="name">lpips</td><td class="min">0.2274</td><td class="max">0.7392</td><td class="avg">0.4853</td></tr>
+<tr><td class="name">psnr</td><td class="min">9.7922</td><td class="max">25.4446</td><td class="avg">15.3904</td></tr>
+<tr><td class="name">ssim</td><td class="min">0.1862</td><td class="max">0.9725</td><td class="avg">0.5785</td></tr>
+<tr><td class="name">t_lpips</td><td class="min">0.0120</td><td class="max">0.2355</td><td class="avg">0.0628</td></tr>
+<tr><td class="name">tof</td><td class="min">0.0350</td><td class="max">1.6547</td><td class="avg">0.2431</td></tr>
+<tr><td class="name">vmaf</td><td class="min">0.8664</td><td class="max">29.2924</td><td class="avg">4.7698</td></tr></tbody>
+</table></section>
+    <div class="composite-summary">composite: min=1.9010, max=6.2721, avg=3.1240</div>
+    
+    <section class="report" id="report-1">
+      <h2>Item 1: VideoReward_20241101_transtest1-4657 <span class="composite">composite=3.2374</span></h2>
+      <div class="inputs"><div><b>video</b>: batch/gen/001_create_beautiful_animation_with.mp4</div>
+<div><b>reference</b>: batch/ref/001_create_beautiful_animation_with.mp4</div>
+<div><b>prompt</b>: Create beautiful animation with sparkling lights.</div></div>
+      <table class="metrics">
+        <thead>
+          <tr><th>metric</th><th>score</th><th>status</th><th>time</th><th>error</th></tr>
+        </thead>
+        <tbody>
+          <tr class="metric ok"><td class="name">clipscore</td><td class="score">0.3256</td><td class="status">ok</td><td class="timing">4721.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">lpips</td><td class="score">0.4282</td><td class="status">ok</td><td class="timing">4237.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">psnr</td><td class="score">19.7263</td><td class="status">ok</td><td class="timing">362.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">ssim</td><td class="score">0.8917</td><td class="status">ok</td><td class="timing">7872.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">t_lpips</td><td class="score">0.0515</td><td class="status">ok</td><td class="timing">3910.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">tof</td><td class="score">0.1057</td><td class="status">ok</td><td class="timing">17365.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">vmaf</td><td class="score">1.1324</td><td class="status">ok</td><td class="timing">4823.0 ms</td><td class="error"></td></tr>
+        </tbody>
+      </table>
+    </section>
+    
+
+    <section class="report" id="report-2">
+      <h2>Item 2: VideoReward_20241101_transtest1-1997 <span class="composite">composite=2.4550</span></h2>
+      <div class="inputs"><div><b>video</b>: batch/gen/002_a_cute_robot_looking.mp4</div>
+<div><b>reference</b>: batch/ref/002_a_cute_robot_looking.mp4</div>
+<div><b>prompt</b>: A cute robot looking at himself in the mirror.</div></div>
+      <table class="metrics">
+        <thead>
+          <tr><th>metric</th><th>score</th><th>status</th><th>time</th><th>error</th></tr>
+        </thead>
+        <tbody>
+          <tr class="metric ok"><td class="name">clipscore</td><td class="score">0.3290</td><td class="status">ok</td><td class="timing">4425.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">lpips</td><td class="score">0.4385</td><td class="status">ok</td><td class="timing">3369.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">psnr</td><td class="score">13.6178</td><td class="status">ok</td><td class="timing">385.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">ssim</td><td class="score">0.6139</td><td class="status">ok</td><td class="timing">7367.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">t_lpips</td><td class="score">0.0162</td><td class="status">ok</td><td class="timing">3119.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">tof</td><td class="score">0.1036</td><td class="status">ok</td><td class="timing">15234.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">vmaf</td><td class="score">2.0663</td><td class="status">ok</td><td class="timing">4555.0 ms</td><td class="error"></td></tr>
+        </tbody>
+      </table>
+    </section>
+    
+
+    <section class="report" id="report-3">
+      <h2>Item 3: VideoReward_20241104_test-6508 <span class="composite">composite=2.6108</span></h2>
+      <div class="inputs"><div><b>video</b>: batch/gen/003_a_tunisian_college_club.mp4</div>
+<div><b>reference</b>: batch/ref/003_a_tunisian_college_club_base_704x1216x97t21_49.mp4</div>
+<div><b>prompt</b>: A Tunisian college club named &#x27;Team Cloud&#x27; has created a creative advertising video to encourage people to join the team.</div></div>
+      <table class="metrics">
+        <thead>
+          <tr><th>metric</th><th>score</th><th>status</th><th>time</th><th>error</th></tr>
+        </thead>
+        <tbody>
+          <tr class="metric ok"><td class="name">clipscore</td><td class="score">0.3343</td><td class="status">ok</td><td class="timing">4386.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">lpips</td><td class="score">0.6130</td><td class="status">ok</td><td class="timing">3778.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">psnr</td><td class="score">14.4532</td><td class="status">ok</td><td class="timing">433.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">ssim</td><td class="score">0.4130</td><td class="status">ok</td><td class="timing">7345.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">t_lpips</td><td class="score">0.1877</td><td class="status">ok</td><td class="timing">3561.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">tof</td><td class="score">0.5840</td><td class="status">ok</td><td class="timing">15377.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">vmaf</td><td class="score">1.6906</td><td class="status">ok</td><td class="timing">5068.0 ms</td><td class="error"></td></tr>
+        </tbody>
+      </table>
+    </section>
+    
+
+    <section class="report" id="report-4">
+      <h2>Item 4: VideoReward_20241101_transtest1-1028 <span class="composite">composite=2.2735</span></h2>
+      <div class="inputs"><div><b>video</b>: batch/gen/004_a_boy_looks_up.mp4</div>
+<div><b>reference</b>: batch/ref/004_a_boy_looks_up_base_704x1216x97t21_49.mp4</div>
+<div><b>prompt</b>: A boy looks up into the sky, his head tilted back as if demanding something from God, in a video taken from afar. The boy&#x27;s gaze is not straight ahead.</div></div>
+      <table class="metrics">
+        <thead>
+          <tr><th>metric</th><th>score</th><th>status</th><th>time</th><th>error</th></tr>
+        </thead>
+        <tbody>
+          <tr class="metric ok"><td class="name">clipscore</td><td class="score">0.3418</td><td class="status">ok</td><td class="timing">4428.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">lpips</td><td class="score">0.4206</td><td class="status">ok</td><td class="timing">3341.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">psnr</td><td class="score">13.7643</td><td class="status">ok</td><td class="timing">371.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">ssim</td><td class="score">0.4466</td><td class="status">ok</td><td class="timing">7457.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">t_lpips</td><td class="score">0.0397</td><td class="status">ok</td><td class="timing">3109.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">tof</td><td class="score">0.0350</td><td class="status">ok</td><td class="timing">15427.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">vmaf</td><td class="score">0.8664</td><td class="status">ok</td><td class="timing">4245.0 ms</td><td class="error"></td></tr>
+        </tbody>
+      </table>
+    </section>
+    
+
+    <section class="report" id="report-5">
+      <h2>Item 5: VideoReward_20241101_transtest1-1086 <span class="composite">composite=2.8977</span></h2>
+      <div class="inputs"><div><b>video</b>: batch/gen/005_a_man_with_a.mp4</div>
+<div><b>reference</b>: batch/ref/005_a_man_with_a_base_704x1216x97t21_49.mp4</div>
+<div><b>prompt</b>: A man with a crystal on his forehead pushes it with his index finger while appearing to be in pain, in a 4K fantasy setting.</div></div>
+      <table class="metrics">
+        <thead>
+          <tr><th>metric</th><th>score</th><th>status</th><th>time</th><th>error</th></tr>
+        </thead>
+        <tbody>
+          <tr class="metric ok"><td class="name">clipscore</td><td class="score">0.3305</td><td class="status">ok</td><td class="timing">4407.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">lpips</td><td class="score">0.4648</td><td class="status">ok</td><td class="timing">3305.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">psnr</td><td class="score">17.3500</td><td class="status">ok</td><td class="timing">352.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">ssim</td><td class="score">0.5570</td><td class="status">ok</td><td class="timing">7447.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">t_lpips</td><td class="score">0.0359</td><td class="status">ok</td><td class="timing">3070.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">tof</td><td class="score">0.0589</td><td class="status">ok</td><td class="timing">15140.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">vmaf</td><td class="score">1.4863</td><td class="status">ok</td><td class="timing">4602.0 ms</td><td class="error"></td></tr>
+        </tbody>
+      </table>
+    </section>
+    
+
+    <section class="report" id="report-6">
+      <h2>Item 6: VideoReward_20241101_transtest1-2826 <span class="composite">composite=2.2723</span></h2>
+      <div class="inputs"><div><b>video</b>: batch/gen/006_a_bell_swinging_in.mp4</div>
+<div><b>reference</b>: batch/ref/006_a_bell_swinging_in_base_704x1216x97t21_49.mp4</div>
+<div><b>prompt</b>: A bell swinging in a manner reminiscent of a comic book.</div></div>
+      <table class="metrics">
+        <thead>
+          <tr><th>metric</th><th>score</th><th>status</th><th>time</th><th>error</th></tr>
+        </thead>
+        <tbody>
+          <tr class="metric ok"><td class="name">clipscore</td><td class="score">0.3629</td><td class="status">ok</td><td class="timing">4413.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">lpips</td><td class="score">0.4925</td><td class="status">ok</td><td class="timing">3726.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">psnr</td><td class="score">12.9934</td><td class="status">ok</td><td class="timing">388.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">ssim</td><td class="score">0.5122</td><td class="status">ok</td><td class="timing">7293.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">t_lpips</td><td class="score">0.0482</td><td class="status">ok</td><td class="timing">3511.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">tof</td><td class="score">0.1520</td><td class="status">ok</td><td class="timing">15387.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">vmaf</td><td class="score">1.3451</td><td class="status">ok</td><td class="timing">4372.0 ms</td><td class="error"></td></tr>
+        </tbody>
+      </table>
+    </section>
+    
+
+    <section class="report" id="report-7">
+      <h2>Item 7: VideoReward_20241101_transtest1-1057 <span class="composite">composite=3.4523</span></h2>
+      <div class="inputs"><div><b>video</b>: batch/gen/007_travis_scott_performs_on.mp4</div>
+<div><b>reference</b>: batch/ref/007_travis_scott_performs_on_base_704x1216x97t21_49.mp4</div>
+<div><b>prompt</b>: Travis Scott performs on top of an Egyptian pyramid amidst a spectacular show featuring dazzling lights and numerous neon displays, captured in 4K resolution with realistic detail, and formatted in full HD with an aspect ratio of 9:16.</div></div>
+      <table class="metrics">
+        <thead>
+          <tr><th>metric</th><th>score</th><th>status</th><th>time</th><th>error</th></tr>
+        </thead>
+        <tbody>
+          <tr class="metric ok"><td class="name">clipscore</td><td class="score">0.3804</td><td class="status">ok</td><td class="timing">4446.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">lpips</td><td class="score">0.5323</td><td class="status">ok</td><td class="timing">3339.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">psnr</td><td class="score">16.0165</td><td class="status">ok</td><td class="timing">402.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">ssim</td><td class="score">0.7447</td><td class="status">ok</td><td class="timing">7454.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">t_lpips</td><td class="score">0.1301</td><td class="status">ok</td><td class="timing">3103.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">tof</td><td class="score">0.2524</td><td class="status">ok</td><td class="timing">15445.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">vmaf</td><td class="score">6.1095</td><td class="status">ok</td><td class="timing">4893.0 ms</td><td class="error"></td></tr>
+        </tbody>
+      </table>
+    </section>
+    
+
+    <section class="report" id="report-8">
+      <h2>Item 8: VideoReward_20241104_test-3857 <span class="composite">composite=3.2764</span></h2>
+      <div class="inputs"><div><b>video</b>: batch/gen/008_that_a_person_is.mp4</div>
+<div><b>reference</b>: batch/ref/008_that_a_person_is_base_704x1216x97t21_49.mp4</div>
+<div><b>prompt</b>: That a person is seen quickly entering the school.</div></div>
+      <table class="metrics">
+        <thead>
+          <tr><th>metric</th><th>score</th><th>status</th><th>time</th><th>error</th></tr>
+        </thead>
+        <tbody>
+          <tr class="metric ok"><td class="name">clipscore</td><td class="score">0.2968</td><td class="status">ok</td><td class="timing">4389.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">lpips</td><td class="score">0.4703</td><td class="status">ok</td><td class="timing">3372.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">psnr</td><td class="score">16.4613</td><td class="status">ok</td><td class="timing">370.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">ssim</td><td class="score">0.7305</td><td class="status">ok</td><td class="timing">7500.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">t_lpips</td><td class="score">0.0761</td><td class="status">ok</td><td class="timing">3121.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">tof</td><td class="score">0.3146</td><td class="status">ok</td><td class="timing">15323.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">vmaf</td><td class="score">4.5849</td><td class="status">ok</td><td class="timing">4884.0 ms</td><td class="error"></td></tr>
+        </tbody>
+      </table>
+    </section>
+    
+
+    <section class="report" id="report-9">
+      <h2>Item 9: VideoReward_20241101_transtest1-4663 <span class="composite">composite=2.9081</span></h2>
+      <div class="inputs"><div><b>video</b>: batch/gen/009_a_taxi_is_moving.mp4</div>
+<div><b>reference</b>: batch/ref/009_a_taxi_is_moving_base_704x1216x97t21_49.mp4</div>
+<div><b>prompt</b>: A taxi is moving and drifting on the streets at midnight.</div></div>
+      <table class="metrics">
+        <thead>
+          <tr><th>metric</th><th>score</th><th>status</th><th>time</th><th>error</th></tr>
+        </thead>
+        <tbody>
+          <tr class="metric ok"><td class="name">clipscore</td><td class="score">0.3531</td><td class="status">ok</td><td class="timing">4375.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">lpips</td><td class="score">0.5958</td><td class="status">ok</td><td class="timing">3751.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">psnr</td><td class="score">12.9943</td><td class="status">ok</td><td class="timing">409.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">ssim</td><td class="score">0.3859</td><td class="status">ok</td><td class="timing">7347.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">t_lpips</td><td class="score">0.2355</td><td class="status">ok</td><td class="timing">3554.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">tof</td><td class="score">1.6547</td><td class="status">ok</td><td class="timing">15325.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">vmaf</td><td class="score">4.1371</td><td class="status">ok</td><td class="timing">4946.0 ms</td><td class="error"></td></tr>
+        </tbody>
+      </table>
+    </section>
+    
+
+    <section class="report" id="report-10">
+      <h2>Item 10: VideoReward_20241101_transtest1-1006 <span class="composite">composite=2.6099</span></h2>
+      <div class="inputs"><div><b>video</b>: batch/gen/010_animal_with_three_faces..mp4</div>
+<div><b>reference</b>: batch/ref/010_animal_with_three_faces._base_704x1216x97t21_49.mp4</div>
+<div><b>prompt</b>: Animal with three faces. 4K resolution.</div></div>
+      <table class="metrics">
+        <thead>
+          <tr><th>metric</th><th>score</th><th>status</th><th>time</th><th>error</th></tr>
+        </thead>
+        <tbody>
+          <tr class="metric ok"><td class="name">clipscore</td><td class="score">0.2745</td><td class="status">ok</td><td class="timing">4413.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">lpips</td><td class="score">0.4424</td><td class="status">ok</td><td class="timing">3362.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">psnr</td><td class="score">15.8955</td><td class="status">ok</td><td class="timing">391.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">ssim</td><td class="score">0.6573</td><td class="status">ok</td><td class="timing">7452.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">t_lpips</td><td class="score">0.0301</td><td class="status">ok</td><td class="timing">3085.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">tof</td><td class="score">0.0682</td><td class="status">ok</td><td class="timing">15254.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">vmaf</td><td class="score">0.9015</td><td class="status">ok</td><td class="timing">4511.0 ms</td><td class="error"></td></tr>
+        </tbody>
+      </table>
+    </section>
+    
+
+    <section class="report" id="report-11">
+      <h2>Item 11: VideoReward_20241101_transtest1-4684 <span class="composite">composite=1.9010</span></h2>
+      <div class="inputs"><div><b>video</b>: batch/gen/011_one_day,_when_two.mp4</div>
+<div><b>reference</b>: batch/ref/011_one_day,_when_two_base_704x1216x97t21_49.mp4</div>
+<div><b>prompt</b>: One day, when two friends were sitting together, they encountered a person on the path, behind whom there was a lion. Both of them worked together to chase away the lion. The person said, &quot;Son, I will tell you a secret.&quot;</div></div>
+      <table class="metrics">
+        <thead>
+          <tr><th>metric</th><th>score</th><th>status</th><th>time</th><th>error</th></tr>
+        </thead>
+        <tbody>
+          <tr class="metric ok"><td class="name">clipscore</td><td class="score">0.3083</td><td class="status">ok</td><td class="timing">4443.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">lpips</td><td class="score">0.6650</td><td class="status">ok</td><td class="timing">3309.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">psnr</td><td class="score">10.8704</td><td class="status">ok</td><td class="timing">352.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">ssim</td><td class="score">0.2957</td><td class="status">ok</td><td class="timing">7420.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">t_lpips</td><td class="score">0.0409</td><td class="status">ok</td><td class="timing">3070.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">tof</td><td class="score">0.2104</td><td class="status">ok</td><td class="timing">15189.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">vmaf</td><td class="score">0.9165</td><td class="status">ok</td><td class="timing">4594.0 ms</td><td class="error"></td></tr>
+        </tbody>
+      </table>
+    </section>
+    
+
+    <section class="report" id="report-12">
+      <h2>Item 12: VideoReward_20241101_transtest1-1095 <span class="composite">composite=2.5135</span></h2>
+      <div class="inputs"><div><b>video</b>: batch/gen/012_a_seven-year-old_asian_girl.mp4</div>
+<div><b>reference</b>: batch/ref/012_a_seven-year-old_asian_girl_base_704x1216x97t21_49.mp4</div>
+<div><b>prompt</b>: A seven-year-old Asian girl is floating in space, drawing a galaxy.</div></div>
+      <table class="metrics">
+        <thead>
+          <tr><th>metric</th><th>score</th><th>status</th><th>time</th><th>error</th></tr>
+        </thead>
+        <tbody>
+          <tr class="metric ok"><td class="name">clipscore</td><td class="score">0.3900</td><td class="status">ok</td><td class="timing">4381.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">lpips</td><td class="score">0.4897</td><td class="status">ok</td><td class="timing">3766.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">psnr</td><td class="score">15.1418</td><td class="status">ok</td><td class="timing">361.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">ssim</td><td class="score">0.3369</td><td class="status">ok</td><td class="timing">7368.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">t_lpips</td><td class="score">0.0787</td><td class="status">ok</td><td class="timing">3538.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">tof</td><td class="score">0.1553</td><td class="status">ok</td><td class="timing">15269.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">vmaf</td><td class="score">1.0020</td><td class="status">ok</td><td class="timing">4611.0 ms</td><td class="error"></td></tr>
+        </tbody>
+      </table>
+    </section>
+    
+
+    <section class="report" id="report-13">
+      <h2>Item 13: VideoReward_20241101_transtest1-2815 <span class="composite">composite=6.2721</span></h2>
+      <div class="inputs"><div><b>video</b>: batch/gen/013_a_close-up_shot_of.mp4</div>
+<div><b>reference</b>: batch/ref/013_a_close-up_shot_of_base_704x1216x97t21_49.mp4</div>
+<div><b>prompt</b>: A close-up shot of a majestic leap by a frog from a lily pad.</div></div>
+      <table class="metrics">
+        <thead>
+          <tr><th>metric</th><th>score</th><th>status</th><th>time</th><th>error</th></tr>
+        </thead>
+        <tbody>
+          <tr class="metric ok"><td class="name">clipscore</td><td class="score">0.3362</td><td class="status">ok</td><td class="timing">4379.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">lpips</td><td class="score">0.4774</td><td class="status">ok</td><td class="timing">3311.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">psnr</td><td class="score">13.3784</td><td class="status">ok</td><td class="timing">381.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">ssim</td><td class="score">0.3688</td><td class="status">ok</td><td class="timing">7523.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">t_lpips</td><td class="score">0.0120</td><td class="status">ok</td><td class="timing">3078.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">tof</td><td class="score">0.0393</td><td class="status">ok</td><td class="timing">15308.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">vmaf</td><td class="score">29.2924</td><td class="status">ok</td><td class="timing">4329.0 ms</td><td class="error"></td></tr>
+        </tbody>
+      </table>
+    </section>
+    
+
+    <section class="report" id="report-14">
+      <h2>Item 14: VideoReward_20241101_transtest1-1024 <span class="composite">composite=2.4320</span></h2>
+      <div class="inputs"><div><b>video</b>: batch/gen/014_a_lion_raises_the.mp4</div>
+<div><b>reference</b>: batch/ref/014_a_lion_raises_the_base_704x1216x97t21_49.mp4</div>
+<div><b>prompt</b>: A lion raises the Argentine flag.</div></div>
+      <table class="metrics">
+        <thead>
+          <tr><th>metric</th><th>score</th><th>status</th><th>time</th><th>error</th></tr>
+        </thead>
+        <tbody>
+          <tr class="metric ok"><td class="name">clipscore</td><td class="score">0.4135</td><td class="status">ok</td><td class="timing">4367.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">lpips</td><td class="score">0.3789</td><td class="status">ok</td><td class="timing">3299.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">psnr</td><td class="score">13.9489</td><td class="status">ok</td><td class="timing">348.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">ssim</td><td class="score">0.4245</td><td class="status">ok</td><td class="timing">7459.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">t_lpips</td><td class="score">0.0394</td><td class="status">ok</td><td class="timing">3076.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">tof</td><td class="score">0.1729</td><td class="status">ok</td><td class="timing">15325.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">vmaf</td><td class="score">1.6458</td><td class="status">ok</td><td class="timing">4458.0 ms</td><td class="error"></td></tr>
+        </tbody>
+      </table>
+    </section>
+    
+
+    <section class="report" id="report-15">
+      <h2>Item 15: VideoReward_20241104_test-1186 <span class="composite">composite=2.8715</span></h2>
+      <div class="inputs"><div><b>video</b>: batch/gen/015_the_mystical_moment_in.mp4</div>
+<div><b>reference</b>: batch/ref/015_the_mystical_moment_in_base_704x1216x97t21_49.mp4</div>
+<div><b>prompt</b>: The mystical moment in Giant City at dawn, where a black rabbit watches a majestic golden dragon flying around the skyscrapers.</div></div>
+      <table class="metrics">
+        <thead>
+          <tr><th>metric</th><th>score</th><th>status</th><th>time</th><th>error</th></tr>
+        </thead>
+        <tbody>
+          <tr class="metric ok"><td class="name">clipscore</td><td class="score">0.3868</td><td class="status">ok</td><td class="timing">4425.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">lpips</td><td class="score">0.4302</td><td class="status">ok</td><td class="timing">3719.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">psnr</td><td class="score">15.8496</td><td class="status">ok</td><td class="timing">338.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">ssim</td><td class="score">0.7418</td><td class="status">ok</td><td class="timing">7483.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">t_lpips</td><td class="score">0.0437</td><td class="status">ok</td><td class="timing">3499.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">tof</td><td class="score">0.3660</td><td class="status">ok</td><td class="timing">15244.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">vmaf</td><td class="score">2.2827</td><td class="status">ok</td><td class="timing">4642.0 ms</td><td class="error"></td></tr>
+        </tbody>
+      </table>
+    </section>
+    
+
+    <section class="report" id="report-16">
+      <h2>Item 16: VideoReward_20241101_transtest1-3756 <span class="composite">composite=5.6661</span></h2>
+      <div class="inputs"><div><b>video</b>: batch/gen/016_drone_view_of_a.mp4</div>
+<div><b>reference</b>: batch/ref/016_drone_view_of_a_base_704x1216x97t21_49.mp4</div>
+<div><b>prompt</b>: Drone view of a jutting crag.</div></div>
+      <table class="metrics">
+        <thead>
+          <tr><th>metric</th><th>score</th><th>status</th><th>time</th><th>error</th></tr>
+        </thead>
+        <tbody>
+          <tr class="metric ok"><td class="name">clipscore</td><td class="score">0.2891</td><td class="status">ok</td><td class="timing">4421.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">lpips</td><td class="score">0.2274</td><td class="status">ok</td><td class="timing">3376.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">psnr</td><td class="score">25.4446</td><td class="status">ok</td><td class="timing">402.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">ssim</td><td class="score">0.9725</td><td class="status">ok</td><td class="timing">7536.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">t_lpips</td><td class="score">0.0173</td><td class="status">ok</td><td class="timing">3131.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">tof</td><td class="score">0.0474</td><td class="status">ok</td><td class="timing">15343.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">vmaf</td><td class="score">12.6643</td><td class="status">ok</td><td class="timing">4464.0 ms</td><td class="error"></td></tr>
+        </tbody>
+      </table>
+    </section>
+    
+
+    <section class="report" id="report-17">
+      <h2>Item 17: VideoReward_20241101_transtest1-4609 <span class="composite">composite=4.1077</span></h2>
+      <div class="inputs"><div><b>video</b>: batch/gen/017_jakarta_city_is_drowning.mp4</div>
+<div><b>reference</b>: batch/ref/017_jakarta_city_is_drowning_base_704x1216x97t21_49.mp4</div>
+<div><b>prompt</b>: Jakarta city is drowning in floods; bird&#x27;s-eye views are hyper-realistic.</div></div>
+      <table class="metrics">
+        <thead>
+          <tr><th>metric</th><th>score</th><th>status</th><th>time</th><th>error</th></tr>
+        </thead>
+        <tbody>
+          <tr class="metric ok"><td class="name">clipscore</td><td class="score">0.3463</td><td class="status">ok</td><td class="timing">4385.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">lpips</td><td class="score">0.3203</td><td class="status">ok</td><td class="timing">3342.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">psnr</td><td class="score">19.7448</td><td class="status">ok</td><td class="timing">366.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">ssim</td><td class="score">0.9050</td><td class="status">ok</td><td class="timing">7398.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">t_lpips</td><td class="score">0.0206</td><td class="status">ok</td><td class="timing">3106.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">tof</td><td class="score">0.0856</td><td class="status">ok</td><td class="timing">15266.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">vmaf</td><td class="score">7.3314</td><td class="status">ok</td><td class="timing">4620.0 ms</td><td class="error"></td></tr>
+        </tbody>
+      </table>
+    </section>
+    
+
+    <section class="report" id="report-18">
+      <h2>Item 18: VideoReward_20241104_test-6525 <span class="composite">composite=2.7383</span></h2>
+      <div class="inputs"><div><b>video</b>: batch/gen/018_hungry_children_were_eating.mp4</div>
+<div><b>reference</b>: batch/ref/018_hungry_children_were_eating_base_704x1216x97t21_49.mp4</div>
+<div><b>prompt</b>: Hungry children were eating a can of beans vigorously.</div></div>
+      <table class="metrics">
+        <thead>
+          <tr><th>metric</th><th>score</th><th>status</th><th>time</th><th>error</th></tr>
+        </thead>
+        <tbody>
+          <tr class="metric ok"><td class="name">clipscore</td><td class="score">0.3120</td><td class="status">ok</td><td class="timing">4392.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">lpips</td><td class="score">0.5163</td><td class="status">ok</td><td class="timing">3674.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">psnr</td><td class="score">15.5892</td><td class="status">ok</td><td class="timing">365.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">ssim</td><td class="score">0.6798</td><td class="status">ok</td><td class="timing">7276.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">t_lpips</td><td class="score">0.0247</td><td class="status">ok</td><td class="timing">3500.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">tof</td><td class="score">0.0799</td><td class="status">ok</td><td class="timing">15246.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">vmaf</td><td class="score">1.9658</td><td class="status">ok</td><td class="timing">4638.0 ms</td><td class="error"></td></tr>
+        </tbody>
+      </table>
+    </section>
+    
+
+    <section class="report" id="report-19">
+      <h2>Item 19: VideoReward_20241104_test-4786 <span class="composite">composite=3.2765</span></h2>
+      <div class="inputs"><div><b>video</b>: batch/gen/019_the_number_from_2023.mp4</div>
+<div><b>reference</b>: batch/ref/019_the_number_from_2023_base_704x1216x97t21_49.mp4</div>
+<div><b>prompt</b>: The number from 2023 is increasing rapidly, approaching 9999.</div></div>
+      <table class="metrics">
+        <thead>
+          <tr><th>metric</th><th>score</th><th>status</th><th>time</th><th>error</th></tr>
+        </thead>
+        <tbody>
+          <tr class="metric ok"><td class="name">clipscore</td><td class="score">0.3048</td><td class="status">ok</td><td class="timing">4405.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">lpips</td><td class="score">0.7392</td><td class="status">ok</td><td class="timing">3342.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">psnr</td><td class="score">9.7922</td><td class="status">ok</td><td class="timing">372.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">ssim</td><td class="score">0.1862</td><td class="status">ok</td><td class="timing">7534.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">t_lpips</td><td class="score">0.0207</td><td class="status">ok</td><td class="timing">3083.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">tof</td><td class="score">0.0716</td><td class="status">ok</td><td class="timing">20699.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">vmaf</td><td class="score">11.8210</td><td class="status">ok</td><td class="timing">4351.0 ms</td><td class="error"></td></tr>
+        </tbody>
+      </table>
+    </section>
+    
+
+    <section class="report" id="report-20">
+      <h2>Item 20: VideoReward_20241104_test-1171 <span class="composite">composite=2.7084</span></h2>
+      <div class="inputs"><div><b>video</b>: batch/gen/020_a_porsche,_sleek_and.mp4</div>
+<div><b>reference</b>: batch/ref/020_a_porsche,_sleek_and_base_704x1216x97t21_49.mp4</div>
+<div><b>prompt</b>: A Porsche, sleek and black, races swiftly along the asphalt. It weaves through the landscape against a backdrop of destroyed houses and skyscrapers cloaked in moss. As dawn breaks, the crimson sun ascends into the sky.</div></div>
+      <table class="metrics">
+        <thead>
+          <tr><th>metric</th><th>score</th><th>status</th><th>time</th><th>error</th></tr>
+        </thead>
+        <tbody>
+          <tr class="metric ok"><td class="name">clipscore</td><td class="score">0.3506</td><td class="status">ok</td><td class="timing">4411.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">lpips</td><td class="score">0.5633</td><td class="status">ok</td><td class="timing">3356.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">psnr</td><td class="score">14.7745</td><td class="status">ok</td><td class="timing">363.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">ssim</td><td class="score">0.7054</td><td class="status">ok</td><td class="timing">7514.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">t_lpips</td><td class="score">0.1081</td><td class="status">ok</td><td class="timing">3109.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">tof</td><td class="score">0.3037</td><td class="status">ok</td><td class="timing">15244.0 ms</td><td class="error"></td></tr>
+<tr class="metric ok"><td class="name">vmaf</td><td class="score">2.1531</td><td class="status">ok</td><td class="timing">4806.0 ms</td><td class="error"></td></tr>
+        </tbody>
+      </table>
+    </section>
+    
+  </main>
+  <footer>Generated by Surveyor2</footer>
+</body>
+</html>

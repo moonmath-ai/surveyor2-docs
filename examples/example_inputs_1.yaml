@@ -1,0 +1,5 @@
+inputs:
+  video: example1_gen.mp4
+  reference: example1_ref.mp4   # required for PSNR/SSIM; omit for CLIPScore-only runs
+  max_frames: 81                 # optional cap
+  prompt: "a dark gray square"

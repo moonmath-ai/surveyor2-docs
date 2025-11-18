@@ -1,0 +1,100 @@
+inputs:
+  - id: "VideoReward_20241101_transtest1-4657"
+    video: "batch/gen/001_create_beautiful_animation_with.mp4"
+    reference: "batch/ref/001_create_beautiful_animation_with.mp4"
+    prompt: "Create beautiful animation with sparkling lights."
+
+  - id: "VideoReward_20241101_transtest1-1997"
+    video: "batch/gen/002_a_cute_robot_looking.mp4"
+    reference: "batch/ref/002_a_cute_robot_looking.mp4"
+    prompt: "A cute robot looking at himself in the mirror."
+
+  - id: "VideoReward_20241104_test-6508"
+    video: "batch/gen/003_a_tunisian_college_club.mp4"
+    reference: "batch/ref/003_a_tunisian_college_club_base_704x1216x97t21_49.mp4"
+    prompt: "A Tunisian college club named 'Team Cloud' has created a creative advertising video to encourage people to join the team."
+
+  - id: "VideoReward_20241101_transtest1-1028"
+    video: "batch/gen/004_a_boy_looks_up.mp4"
+    reference: "batch/ref/004_a_boy_looks_up_base_704x1216x97t21_49.mp4"
+    prompt: "A boy looks up into the sky, his head tilted back as if demanding something from God, in a video taken from afar. The boy's gaze is not straight ahead."
+
+  - id: "VideoReward_20241101_transtest1-1086"
+    video: "batch/gen/005_a_man_with_a.mp4"
+    reference: "batch/ref/005_a_man_with_a_base_704x1216x97t21_49.mp4"
+    prompt: "A man with a crystal on his forehead pushes it with his index finger while appearing to be in pain, in a 4K fantasy setting."
+
+  - id: "VideoReward_20241101_transtest1-2826"
+    video: "batch/gen/006_a_bell_swinging_in.mp4"
+    reference: "batch/ref/006_a_bell_swinging_in_base_704x1216x97t21_49.mp4"
+    prompt: "A bell swinging in a manner reminiscent of a comic book."
+
+  - id: "VideoReward_20241101_transtest1-1057"
+    video: "batch/gen/007_travis_scott_performs_on.mp4"
+    reference: "batch/ref/007_travis_scott_performs_on_base_704x1216x97t21_49.mp4"
+    prompt: "Travis Scott performs on top of an Egyptian pyramid amidst a spectacular show featuring dazzling lights and numerous neon displays, captured in 4K resolution with realistic detail, and formatted in full HD with an aspect ratio of 9:16."
+
+  - id: "VideoReward_20241104_test-3857"
+    video: "batch/gen/008_that_a_person_is.mp4"
+    reference: "batch/ref/008_that_a_person_is_base_704x1216x97t21_49.mp4"
+    prompt: "That a person is seen quickly entering the school."
+
+  - id: "VideoReward_20241101_transtest1-4663"
+    video: "batch/gen/009_a_taxi_is_moving.mp4"
+    reference: "batch/ref/009_a_taxi_is_moving_base_704x1216x97t21_49.mp4"
+    prompt: "A taxi is moving and drifting on the streets at midnight."
+
+  - id: "VideoReward_20241101_transtest1-1006"
+    video: "batch/gen/010_animal_with_three_faces..mp4"
+    reference: "batch/ref/010_animal_with_three_faces._base_704x1216x97t21_49.mp4"
+    prompt: "Animal with three faces. 4K resolution."
+
+  - id: "VideoReward_20241101_transtest1-4684"
+    video: "batch/gen/011_one_day,_when_two.mp4"
+    reference: "batch/ref/011_one_day,_when_two_base_704x1216x97t21_49.mp4"
+    prompt: "One day, when two friends were sitting together, they encountered a person on the path, behind whom there was a lion. Both of them worked together to chase away the lion. The person said, \"Son, I will tell you a secret.\""
+
+  - id: "VideoReward_20241101_transtest1-1095"
+    video: "batch/gen/012_a_seven-year-old_asian_girl.mp4"
+    reference: "batch/ref/012_a_seven-year-old_asian_girl_base_704x1216x97t21_49.mp4"
+    prompt: "A seven-year-old Asian girl is floating in space, drawing a galaxy."
+
+  - id: "VideoReward_20241101_transtest1-2815"
+    video: "batch/gen/013_a_close-up_shot_of.mp4"
+    reference: "batch/ref/013_a_close-up_shot_of_base_704x1216x97t21_49.mp4"
+    prompt: "A close-up shot of a majestic leap by a frog from a lily pad."
+
+  - id: "VideoReward_20241101_transtest1-1024"
+    video: "batch/gen/014_a_lion_raises_the.mp4"
+    reference: "batch/ref/014_a_lion_raises_the_base_704x1216x97t21_49.mp4"
+    prompt: "A lion raises the Argentine flag."
+
+  - id: "VideoReward_20241104_test-1186"
+    video: "batch/gen/015_the_mystical_moment_in.mp4"
+    reference: "batch/ref/015_the_mystical_moment_in_base_704x1216x97t21_49.mp4"
+    prompt: "The mystical moment in Giant City at dawn, where a black rabbit watches a majestic golden dragon flying around the skyscrapers."
+
+  - id: "VideoReward_20241101_transtest1-3756"
+    video: "batch/gen/016_drone_view_of_a.mp4"
+    reference: "batch/ref/016_drone_view_of_a_base_704x1216x97t21_49.mp4"
+    prompt: "Drone view of a jutting crag."
+
+  - id: "VideoReward_20241101_transtest1-4609"
+    video: "batch/gen/017_jakarta_city_is_drowning.mp4"
+    reference: "batch/ref/017_jakarta_city_is_drowning_base_704x1216x97t21_49.mp4"
+    prompt: "Jakarta city is drowning in floods; bird's-eye views are hyper-realistic."
+
+  - id: "VideoReward_20241104_test-6525"
+    video: "batch/gen/018_hungry_children_were_eating.mp4"
+    reference: "batch/ref/018_hungry_children_were_eating_base_704x1216x97t21_49.mp4"
+    prompt: "Hungry children were eating a can of beans vigorously."
+
+  - id: "VideoReward_20241104_test-4786"
+    video: "batch/gen/019_the_number_from_2023.mp4"
+    reference: "batch/ref/019_the_number_from_2023_base_704x1216x97t21_49.mp4"
+    prompt: "The number from 2023 is increasing rapidly, approaching 9999."
+
+  - id: "VideoReward_20241104_test-1171"
+    video: "batch/gen/020_a_porsche,_sleek_and.mp4"
+    reference: "batch/ref/020_a_porsche,_sleek_and_base_704x1216x97t21_49.mp4"
+    prompt: "A Porsche, sleek and black, races swiftly along the asphalt. It weaves through the landscape against a backdrop of destroyed houses and skyscrapers cloaked in moss. As dawn breaks, the crimson sun ascends into the sky."

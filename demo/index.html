@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surveyor2 Dashboard</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>📊 Surveyor2 Dashboard</h1>
+        </div>
+    </header>
+    
+    <div class="main-layout">
+        <aside class="filter-sidebar">
+            <div class="filter-header">
+                <h3>Metrics Filter</h3>
+                <div class="filter-actions">
+                    <button id="select-all" class="filter-action-btn">All</button>
+                    <button id="deselect-all" class="filter-action-btn">None</button>
+                </div>
+            </div>
+            <div id="metric-filters" class="metric-filters">
+                <div class="loading-filters">Loading metrics...</div>
+            </div>
+        </aside>
+        
+        <div class="main-content">
+            <div class="controls">
+                <label for="report-select">Select Report:</label>
+                <select id="report-select">
+                    
+                    <option value="0">ltx_la_vs_fa.json</option>
+                    
+                    <option value="1">wan2_2_la3_vs_fa.json</option>
+                    
+                </select>
+            </div>
+            
+            <div id="summary-table-container" style="display: none;">
+                <div class="summary-section">
+                    <h2>Report Summary</h2>
+                    <div id="summary-table-wrapper"></div>
+                </div>
+            </div>
+            
+            <div id="report-content">
+                <div class="loading">Loading report...</div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="static/app.js"></script>
+</body>
+</html>

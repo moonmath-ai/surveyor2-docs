@@ -50,7 +50,7 @@ async function loadReport(reportIdx) {
     reportContent.innerHTML = '<div class="loading"><div class="spinner"></div><div class="loading-text">Loading report...</div></div>';
     
     try {
-        const response = await fetch(`/api/report/${reportIdx}`);
+        const response = await fetch(`api/report/${reportIdx}`);
         if (!response.ok) {
             throw new Error(`HTTP ${response.status}`);
         }
@@ -312,14 +312,14 @@ function renderReport(data) {
                         <div class="videos-row">
                             <div class="video-column">
                                 <div class="video-label reference-label">Reference Video</div>
-                                <video class="sync-video lazy-video" data-pair="${pairId}" data-video-type="reference" preload="none" data-src="/video${pair.reference}">
+                                <video class="sync-video lazy-video" data-pair="${pairId}" data-video-type="reference" preload="none" data-src="video/${pair.reference}">
                                     Your browser does not support video playback.
                                 </video>
                             </div>
                             
                             <div class="video-column">
                                 <div class="video-label generated-label">Generated Video</div>
-                                <video class="sync-video lazy-video" data-pair="${pairId}" data-video-type="generated" preload="none" data-src="/video${pair.video}">
+                                <video class="sync-video lazy-video" data-pair="${pairId}" data-video-type="generated" preload="none" data-src="video/${pair.video}">
                                     Your browser does not support video playback.
                                 </video>
                             </div>

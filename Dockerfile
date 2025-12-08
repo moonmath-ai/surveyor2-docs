@@ -25,6 +25,5 @@ RUN wget -O /tmp/ffmpeg.tar.xz https://johnvansickle.com/ffmpeg/releases/ffmpeg-
 COPY . .
 
 RUN pip install surveyor2
-RUN pip install vbench --no-deps
 
 WORKDIR /workspace

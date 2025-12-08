@@ -2,11 +2,18 @@
 
 Video quality evaluation toolkit.
 
-Surveyor2 is a comprehensive video quality assessment tool that evaluates your generated videos using metrics including LPIPS, CLIPScore, VBench, VisionReward and more. Simply point it at your videos and get detailed quality scores, baseline comparisons, and actionable insights. This tool can be used for benchmarking video generation models, tracking quality improvements, and integrating into your CI/CD pipeline with structured JSON reports.
+[![GitHub](https://img.shields.io/badge/GitHub-surveyor2--docs-blue?logo=github)](https://github.com/moonmath-ai/surveyor2-docs)
+
+Surveyor2 is a comprehensive video quality assessment tool that evaluates your generated videos using metrics including LPIPS, CLIPScore, VBench, and more. Simply point it at your videos and get detailed quality scores, baseline comparisons, and actionable insights. This tool can be used for benchmarking video generation models, tracking quality improvements, and integrating into your CI/CD pipeline with structured JSON reports.
 
 ## Demo
 
 https://github.com/user-attachments/assets/8289a7ef-ef78-4a38-ac09-b968fdefbdf3
+
+
+## Live Demo
+
+https://moonmath-ai.github.io/surveyor2-docs/demo/
 
 ---
 
@@ -14,15 +21,12 @@ https://github.com/user-attachments/assets/8289a7ef-ef78-4a38-ac09-b968fdefbdf3
 
 Surveyor2 uses a **src layout** with `pyproject.toml`.
 
-### Option A) One-command Conda env (recommended)
+### Option A) One-command Conda env
 Creates Python 3.11, CUDA 12.4 PyTorch stack, ffmpeg+libvmaf, and extras.
 ```bash
 conda env create -f environment.yml
 conda activate surveyor2
 pip install surveyor2
-
-# Install vbench separately with --no-deps to avoid transformers version conflicts:
-pip install vbench --no-deps
 
 # VMAF requires a special version of ffmpeg. If you don't need VMAF you can skip this step
 ./scripts/install_vmaf.sh
@@ -63,6 +67,20 @@ The prompts file should be JSONL format with one JSON object per line:
 {"id": "video_002", "prompt": "A dog running in a park"}
 ```
 
+### Multiple Reference Videos
+Surveyor2 supports comparing generated videos against multiple reference videos for comprehensive baseline statistics:
+```yaml
+inputs:
+  - id: "multi_ref_example"
+    video: "generated/video.mp4"
+    reference:
+      - "reference/video1.mp4"
+      - "reference/video2.mp4"
+      - "reference/video3.mp4"
+    prompt: "A cat playing with a ball"
+```
+When multiple references are provided, Surveyor2 computes baseline averages and percentage differences automatically.
+
 ### Run evaluation
 
 **Using a default configuration:**
@@ -82,22 +100,31 @@ surveyor2 profile \
 
 Pass `--report-json` to write a JSON report (includes per-item reports and summary). Without it, results are printed to stdout only.
 
-### Generate an HTML report
+### Export JSON report to different formats
+Export your JSON report to CSV, HTML, or Markdown:
 ```bash
-surveyor2 profile \
-  --inputs examples/example_inputs_batch.yaml \
-  --metrics metrics.yaml \
-  --report-html out/report.html
-```
-This writes a single self‑contained HTML file with per-item tables and a batch summary.
+# Export to Markdown
+surveyor2 export markdown out/report.json -o summary.md
 
-### Generate markdown summary from JSON report
-```bash
-surveyor2 markdown \
-  --input out/report.json \
-  --output summary.md
+# Export to CSV
+surveyor2 export csv out/report.json -o report.csv
 ```
-This generates a markdown table with metric summaries, including baseline comparisons if available.
+This generates formatted reports with metric summaries, including baseline comparisons if available.
+
+### Launch interactive web dashboard
+View and compare video quality reports in an interactive web interface:
+```bash
+surveyor2 dashboard out/report.json
+```
+
+**View multiple reports from a folder:**
+```bash
+surveyor2 dashboard out/reports/
+```
+
+> **Note**  
+> The dashboard requires Flask. Install it with: `pip install flask`  
+> Or install the dashboard extra: `pip install surveyor2[dashboard]`
 
 ## Metrics
 
@@ -118,9 +145,6 @@ surveyor2 profile --list
   - Pretrained CNN embeddings; correlates better with human perception.
 - **CLIPScore / CLIP Similarity**
   - CLIP embeddings for text-video or video-video alignment; checks semantics.
-- **VisionReward**
-  - Fine-grained multi-dimensional reward model for human preference learning in videos.
-  - Breaks down subjective judgments into interpretable dimensions with weighted scoring.
 - **VMAF** (Netflix)
   - Learned fusion of PSNR, SSIM, perceptual features; requires ffmpeg with libvmaf.
 - **VBench** (10 dimensions)
@@ -163,7 +187,7 @@ Surveyor2 includes predefined metric configurations for common use cases:
 - **basic**: PSNR and SSIM (fast, reference-based metrics)
 - **fast**: Temporal consistency and quality metrics (t_lpips, tOF, vbench_imaging_quality, vbench_temporal_flickering)
 - **vbench**: Default VBench evaluation dimensions (6 enabled by default)
-- **all**: Comprehensive evaluation with all available metrics (PSNR, SSIM, LPIPS, TLPIPS, CLIPScore, TOF, all 10 VBench dimensions, VisionReward, VMAF)
+- **all**: Comprehensive evaluation with all available metrics (PSNR, SSIM, LPIPS, TLPIPS, CLIPScore, TOF, all 10 VBench dimensions, VMAF)
 
 View predefined metric configurations:
 ```bash
@@ -219,12 +243,9 @@ metrics:
   - name: vbench_subject_consistency
     settings: { device: cuda }
     params: {}
-  - name: visionreward
-    settings: { device: auto }
-    params: {}
 
 aggregate:
-  weights: { psnr: 1, ssim: 1, lpips: 2, clipscore: 2, vbench_subject_consistency: 1, visionreward: 1 }
+  weights: { psnr: 1, ssim: 1, lpips: 2, clipscore: 2, vbench_subject_consistency: 1 }
 ```
 
 ---
